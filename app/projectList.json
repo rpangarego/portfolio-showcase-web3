@@ -1,0 +1,26 @@
+[
+  {
+    "project": "Todo List DApp",
+    "description": "A decentralized Todo List built on the Ethereum blockchain using Solidity for smart contracts and a React/NextJS frontend.",
+    "image": "myimagelink.com/1",
+    "github": "https://github.com/rpangarego/todo-list-dapp"
+  },
+  {
+    "project": "Chicken Token Swap",
+    "description": "This project is a decentralized exchange (DEX) platform that enables users to swap tokens directly from a predefined token list (tokenList.json).",
+    "image": "/chicken-swap-3.png",
+    "github": "https://github.com/rpangarego/chicken-swap"
+  },
+  {
+    "project": "The Lamongan Project - NFT",
+    "description": "This project is inspired by Lamongan, an Indonesian street food. The purpose of this project is also to introduce Indonesian street food to the world through NFT.",
+    "image": "myimagelink.com/3",
+    "github": "https://github.com/rpangarego/the-lamongan-project"
+  },
+  {
+    "project": "Crowdfunding DApp",
+    "description": "Crowdfunding DApp Enables users to create and participate in crowdfunding campaigns using blockchain technology. Built with Next.js and the Thirdweb library.",
+    "image": "/campaign_1.png",
+    "github": "https://github.com/rpangarego/crowdfunding-web3"
+  }
+]
