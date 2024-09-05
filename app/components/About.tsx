@@ -90,7 +90,7 @@ const About = ({ setSelectedPage }: Props) => {
               >
                 View LinkedIn
               </a>
-              <a href="" className="btn" download>
+              <a href="/RONALDO_PANGAREGO_CV_WEB3.pdf" className="btn" download>
                 Download CV
               </a>
             </div>

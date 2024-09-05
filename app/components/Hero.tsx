@@ -30,7 +30,7 @@ const Hero = ({ setSelectedPage }: Props) => {
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         <p className="text-lg md:text-2xl mb-5">
-          Blockchain Dev, Web3 Enthusiast ... Lifelong Learner
+          Web3 Developer, Blockchain Dev, Lifelong Learner.
         </p>
 
         <a href="#projects" className="btn">
