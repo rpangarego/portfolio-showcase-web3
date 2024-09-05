@@ -3,10 +3,18 @@ import React from "react";
 import projectList from "../projectList.json";
 import { LinkOutlined } from "@ant-design/icons";
 import { motion } from "framer-motion";
+import { SelectedPage } from "../constants/types";
 
-const Projects = () => {
+type Props = {
+  setSelectedPage: (value: SelectedPage) => void;
+};
+
+const Projects = ({ setSelectedPage }: Props) => {
   return (
-    <div className="min-h-[95vh] bg-[#f8f9fa]">
+    <div
+      id="projects"
+      className="min-h-[90vh] bg-[#f8f9fa] flex content-center items-center pt-20"
+    >
       <div className="container py-10">
         <div className="mt-4 mb-16">
           <h1 className="text-3xl text-center font-bold mb-8 md:text-4xl">
@@ -20,123 +28,41 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="projects flex flex-col md:flex-row gap-8">
+        <div className="projects flex flex-col lg:flex-row gap-8">
           {/* project */}
-          <motion.div
-            className="card border border-gray-800 md:w-3/12"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <img
-              src="/projects/1.png"
-              alt="project_1_image"
-              className="card-image"
-            />
-            <div className="card-description p-5">
-              <div className="flex flex-row mb-2">
-                <h4 className="w-full font-bold text-2xl">Project 1</h4>
-                <LinkOutlined className="hover:cursor-pointer" />
-              </div>
+          {projectList.map((project, id) => (
+            <motion.div
+              key={id}
+              className="border border-gray-800 md:w-1/2 xl:3/12 md:mx-auto"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
+              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <img
+                src={project.image}
+                alt={`${project.name}_image`}
+                className="card-image border-b border-gray-700"
+              />
+              <div className="card-description py-3 px-5">
+                <a href={project.github} target="_blank">
+                  <div className="flex flex-row mb-2">
+                    <h4 className="w-full font-bold text-2xl hover:underline">
+                      {project.name}
+                    </h4>
+                    <LinkOutlined className="hover:cursor-pointer" />
+                  </div>
+                </a>
 
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                error ducimus ullam pariatur, rerum adipisci saepe temporibus.
-              </p>
-            </div>
-          </motion.div>
-          {/* project */}
-          <motion.div
-            className="card border border-gray-800 md:w-3/12"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <img
-              src="/projects/2.png"
-              alt="project_1_image"
-              className="card-image"
-            />
-            <div className="card-description p-5">
-              <div className="flex flex-row mb-2">
-                <h4 className="w-full font-bold text-2xl">Project 1</h4>
-                <LinkOutlined className="hover:cursor-pointer" />
+                <p>{project.description}</p>
               </div>
-
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                error ducimus ullam pariatur, rerum adipisci saepe temporibus.
-              </p>
-            </div>
-          </motion.div>
-          {/* project */}
-          <motion.div
-            className="card border border-gray-800 md:w-3/12"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <img
-              src="/projects/3.png"
-              alt="project_1_image"
-              className="card-image"
-            />
-            <div className="card-description p-5">
-              <div className="flex flex-row mb-2">
-                <h4 className="w-full font-bold text-2xl">Project 1</h4>
-                <LinkOutlined className="hover:cursor-pointer" />
-              </div>
-
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                error ducimus ullam pariatur, rerum adipisci saepe temporibus.
-              </p>
-            </div>
-          </motion.div>
-          {/* project */}
-          <motion.div
-            className="card border border-gray-800 md:w-3/12"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <img
-              src="/projects/4.png"
-              alt="project_1_image"
-              className="card-image"
-            />
-            <div className="card-description p-5">
-              <div className="flex flex-row mb-2">
-                <h4 className="w-full font-bold text-2xl">Project 1</h4>
-                <LinkOutlined className="hover:cursor-pointer" />
-              </div>
-
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                error ducimus ullam pariatur, rerum adipisci saepe temporibus.
-              </p>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
