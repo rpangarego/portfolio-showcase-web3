@@ -67,7 +67,7 @@ const Contact = ({ setSelectedPage }: Props) => {
           onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
         >
           <h1 className="text-3xl text-center font-bold mb-8 md:text-4xl">
-            Let's Collaborate!
+            Let&apos;s Collaborate!
           </h1>
         </motion.div>
 

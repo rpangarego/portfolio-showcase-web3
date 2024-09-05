@@ -21,10 +21,10 @@ const Projects = ({ setSelectedPage }: Props) => {
             {"<Projects />"}
           </h1>
           <p className="mx-auto md:w-1/2 md:text-center text-lg">
-            Here's a collection of my projects, each developed using a diverse
-            set of technologies chosen to best suit the project's specific
-            needs. These works showcase my ability to turn concepts into
-            functional, well-crafted applications.
+            Here&apos;s a collection of my projects, each developed using a
+            diverse set of technologies chosen to best suit the project&apos;s
+            specific needs. These works showcase my ability to turn concepts
+            into functional, well-crafted applications.
           </p>
         </div>
 

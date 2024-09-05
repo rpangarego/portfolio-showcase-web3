@@ -21,7 +21,7 @@ const Hero = ({ setSelectedPage }: Props) => {
         onViewportEnter={() => setSelectedPage(SelectedPage.Welcome)}
       >
         <h1 className="text-4xl md:text-6xl">
-          H! I'm <span className="font-semibold">Ronaldo Pangarego</span>
+          H! I&apos;m <span className="font-semibold">Ronaldo Pangarego</span>
         </h1>
       </motion.div>
       <motion.div

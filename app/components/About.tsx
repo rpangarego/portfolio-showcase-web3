@@ -3,6 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { SelectedPage } from "../constants/types";
+import Image from "next/image";
+import Image1 from "@/public/1.jpg";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -32,7 +34,18 @@ const About = ({ setSelectedPage }: Props) => {
             }}
             className="lg:w-1/2"
           >
-            <img
+            <Image
+              src={Image1}
+              alt="image_about_me"
+              style={{
+                width: "80%",
+                height: "80%",
+                maxWidth: "600px",
+                maxHeight: "600px",
+              }}
+              className="mx-auto"
+            />
+            {/* <img
               src="/1.jpg"
               alt="image_about_me"
               style={{
@@ -42,7 +55,7 @@ const About = ({ setSelectedPage }: Props) => {
                 maxHeight: "600px",
               }}
               className="mx-auto "
-            />
+            /> */}
           </motion.div>
 
           <motion.div
@@ -60,10 +73,11 @@ const About = ({ setSelectedPage }: Props) => {
               Hi there! My name is{" "}
               <span className="font-bold">Ronaldo Pangarego</span>. I am a
               Blockchain Developer and Web3 Enthusiast, currently living in
-              Indonesia. Over the past few months, I've been on a journey of
-              learning Web3 world. During this time, I've gained experience in
-              creating, deploying, and testing smart contracts, developing
-              ERC-20 tokens, and even creating my own NFT collection (
+              Indonesia. Over the past few months, I&apos;ve been on a journey
+              of learning Web3 world. During this time, I&apos;ve gained
+              experience in creating, deploying, and testing smart contracts,
+              developing ERC-20 tokens, and even creating my own NFT collection
+              (
               <a
                 href="https://testnets.opensea.io/collection/the-lamongan-project"
                 target="_blank"
@@ -76,7 +90,7 @@ const About = ({ setSelectedPage }: Props) => {
             <br />
             <p className="text-lg indent-[30px]">
               I love traveling, exploring new environments, cities, and
-              countries. I'm always eager to experience new things and also
+              countries. I&apos;m always eager to experience new things and also
               quick to dive into new adventures. As a lifelong learner, I am
               highly organized, self-motivated, and creative, constantly seeking
               to expand my knowledge. 🍀
