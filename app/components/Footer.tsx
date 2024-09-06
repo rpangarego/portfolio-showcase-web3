@@ -7,7 +7,10 @@ const Footer = (props: Props) => {
   return (
     <div className="border-t border-gray-800 text-xl">
       <div className="container flex flex-row justify-between items-center min-h-20 ">
-        <span>Developed by Ronaldo Pangarego 🍀</span>
+        <span className="text-sm md:text-base">
+          Developed by <br />
+          Ronaldo Pangarego 🍀
+        </span>
         <div className="social flex flex-row gap-3">
           <a href="https://www.github.com/rpangarego" target="_blank">
             <Image

@@ -20,7 +20,7 @@ const Hero = ({ setSelectedPage }: Props) => {
         transition={{ duration: 0.5 }}
         onViewportEnter={() => setSelectedPage(SelectedPage.Welcome)}
       >
-        <h1 className="text-4xl md:text-6xl">
+        <h1 className="text-4xl lg:text-6xl">
           H! I&apos;m <span className="font-semibold">Ronaldo Pangarego</span>
         </h1>
       </motion.div>
@@ -29,7 +29,7 @@ const Hero = ({ setSelectedPage }: Props) => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        <p className="text-lg md:text-2xl mb-5">
+        <p className="text-lg lg:text-2xl mb-5">
           Web3 Developer, Blockchain Dev, Lifelong Learner.
         </p>
 

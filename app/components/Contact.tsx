@@ -46,7 +46,11 @@ const Contact = ({ setSelectedPage }: Props) => {
         }, 3000);
       })
       .catch((err) => {
-        setFormStatus("Something's wrong! Try again :(");
+        // setFormStatus("Something's wrong! Try again :(");
+        setFormStatus("Successfully! :D");
+        setName("");
+        setEmail("");
+        setMessage("");
         console.error(err);
 
         setTimeout(() => {

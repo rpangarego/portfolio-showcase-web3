@@ -45,17 +45,6 @@ const About = ({ setSelectedPage }: Props) => {
               }}
               className="mx-auto"
             />
-            {/* <img
-              src="/1.jpg"
-              alt="image_about_me"
-              style={{
-                width: "80%",
-                height: "80%",
-                maxWidth: "600px",
-                maxHeight: "600px",
-              }}
-              className="mx-auto "
-            /> */}
           </motion.div>
 
           <motion.div
@@ -96,15 +85,19 @@ const About = ({ setSelectedPage }: Props) => {
               to expand my knowledge. 🍀
             </p>
 
-            <div className="mt-8">
+            <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
               <a
                 href="https://www.linkedin.com/in/rpangarego"
                 target="_blank"
-                className="btn mr-8"
+                className="btn text-center mx-auto sm:mx-0 w-full "
               >
                 View LinkedIn
               </a>
-              <a href="/RONALDO_PANGAREGO_CV_WEB3.pdf" className="btn" download>
+              <a
+                href="/RONALDO_PANGAREGO_CV_WEB3.pdf"
+                className="btn text-center mx-auto sm:mx-0 w-full "
+                download
+              >
                 Download CV
               </a>
             </div>
